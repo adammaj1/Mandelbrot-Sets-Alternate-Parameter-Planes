@@ -35,7 +35,23 @@ Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_
 
 ![](./lcm/LCM_c_Myrberg_5000_1.330000_400.700000_600.png)
 
-## p*z*(z-1) logistic family
+## p*z*(z-1) = logistic family
+
+
+  m*z*(1.0-z)
+  
+![](./lcm/LCM_lambda_5000_1.000000_3.200000_600,png)
+
+
+  z*(1.0-z)/m
+
+![](./lcm/LCM_lambda_inverted_5000_0.000000_1.120000_600.png)
+
+
+  (1 + 1/m)*z*(1.0-z)
+
+
+![](./lcm/LCM_lambda_inverted_1_5000_0.000000_1.100000_600.png)  
 
 
 # Git
