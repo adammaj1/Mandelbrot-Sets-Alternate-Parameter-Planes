@@ -4,6 +4,14 @@
 [Julia and Mandelbrot Sets. Alternate Parameter Planes by David E. Joyce © 1994.](https://mathcs.clarku.edu/~djoyce/julia/altplane.html)
 
 
+Images
+
+
+   z^2 +c
+
+
+![](./lcm/LCM_c_5000_-0.750000_1.500000_600.png)
+
 
 
 
