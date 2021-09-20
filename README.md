@@ -1,6 +1,11 @@
 # Mandelbrot-Sets-Alternate-Parameter-Planes
 
 
+[Julia and Mandelbrot Sets. Alternate Parameter Planes by David E. Joyce © 1994.](https://mathcs.clarku.edu/~djoyce/julia/altplane.html)
+
+
+
+
 
 
 # Git
@@ -18,7 +23,30 @@ git push -u origin main
 ```
 
 
-Local repo
+## Local repo
 ```
 ~/Dokumenty/mandelbrot_planes$ 
+```
+
+
+
+
+## Subdirectory
+
+```git
+mkdir png
+git add *.png
+git mv  *.png ./png
+git commit -m "move"
+git push -u origin main
+```
+then link the images:
+
+```txt
+![](./images/n.png "description") 
+
+```
+
+```git
+gitm mv -f 
 ```
