@@ -40,7 +40,7 @@ Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_
 
   m*z*(1.0-z)
   
-![](./lcm/LCM_lambda_5000_1.000000_3.200000_600,png)
+![](./lcm/LCM_lambda_5000_1.000000_3.200000_600.png)
 
 
   z*(1.0-z)/m
