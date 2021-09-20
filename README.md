@@ -20,13 +20,20 @@ Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_
 ![](./lcm/LCM_c_inverted_5000_1.330000_2.700000_600.png)
 
 
-  z^2 -2.0 + 1.0/c
+  z^2 -2.0+1.0/c
 
 
 ![](./lcm/LCM_c_inverted_2_5000_2.000000_5.000000_600.png)
 
 
+  z^2 + 0.25+1.0/c
+  
+![](./lcm/LCM_c_parabola_5000_4.000000_5.000000_600.png)
 
+
+  z^2 -1.401155 - 1.0/c
+
+![](./lcm/LCM_c_Myrberg_5000_1.330000_400.700000_600.png)
 
 ## p*z*(z-1) logistic family
 
