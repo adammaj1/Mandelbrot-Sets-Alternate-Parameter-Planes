@@ -9,6 +9,15 @@ Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_
 
 ## z^2+p family
 
+Here 
+
+
+    p = t(c)
+    
+###  z^2 + c
+
+First example is simple " p = c
+
    z^2 + c
 
 
@@ -19,7 +28,10 @@ Description by  [David E. Joyce](https://mathcs.clarku.edu/~djoyce/julia/altplan
 
 
 
-  z^2 + 1/c
+### z^2 + 1/c
+
+Second example iss simple inversion. Here p = 1/c
+
   
 ![](./png/LCM_c_inverted_5000_1.330000_2.700000_600.png)
 
@@ -33,14 +45,19 @@ Description by  [Nikola Ubavić](https://ubavic.rs/work/julia_and_mandelbrot_set
 > The inverse of the cardioid is the exterior of a teardrop shape. The circles on the outside of the cardioid are inverted to circles on the inside of the teardrop. The cusp of the cardioid becomes the cusp of the teardrop.
 
 
+### z^2 -2.0+1.0/c
 
-  z^2 -2.0+1.0/c
-
+Third example : p =  -2.0+1.0/c
 
 ![](./png/LCM_c_inverted_2_5000_2.000000_5.000000_600.png)
 
 
-  z^2 + 0.25+1.0/c
+### z^2 + 0.25+1.0/c
+
+Fourth example : p =  0.25 + 1.0/c
+
+
+  
   
 ![](./png/LCM_c_parabola_5000_4.000000_5.000000_600.png)
 
@@ -53,15 +70,28 @@ Description by  [Nikola Ubavić](https://ubavic.rs/work/julia_and_mandelbrot_set
 > The circles on the outside of the cardioid are inverted to circles on the inside of the parabola.
 
 
-See also :
-* 
+### z^2 -1.401155 - 1.0/c
 
+Fifth example: p =  -1.401155 - 1.0/c
 
-
-
-  z^2 -1.401155 - 1.0/c
+  
 
 ![](./png/LCM_c_Myrberg_5000_1.330000_400.700000_600.png)
+
+
+
+### Exponential map
+
+Where
+* c = c0 + cexp(x + i y) 
+* x + i y = clog(c - c0)
+* with scaling by 2pi/width
+
+
+
+
+
+
 
 ## p*z*(z-1) = logistic family
 
