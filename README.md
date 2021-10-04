@@ -16,11 +16,9 @@ Here
     
 ###  z^2 + c
 
-First example is simple " p = c
+First example is simple: p = c
 
-   z^2 + c
-
-
+  
 ![](./png/LCM_c_5000_-0.750000_1.500000_600.png)
 
 Description by  [David E. Joyce](https://mathcs.clarku.edu/~djoyce/julia/altplane.html)  
@@ -30,7 +28,7 @@ Description by  [David E. Joyce](https://mathcs.clarku.edu/~djoyce/julia/altplan
 
 ### z^2 + 1/c
 
-Second example iss simple inversion. Here p = 1/c
+Second example is simple inversion. Here p = 1/c
 
   
 ![](./png/LCM_c_inverted_5000_1.330000_2.700000_600.png)
@@ -47,14 +45,14 @@ Description by  [Nikola Ubavić](https://ubavic.rs/work/julia_and_mandelbrot_set
 
 ### z^2 -2.0+1.0/c
 
-Third example : p =  -2.0+1.0/c
+Here : p =  -2.0+1.0/c
 
 ![](./png/LCM_c_inverted_2_5000_2.000000_5.000000_600.png)
 
 
 ### z^2 + 0.25+1.0/c
 
-Fourth example : p =  0.25 + 1.0/c
+Here: p =  0.25 + 1.0/c
 
 
   
@@ -72,7 +70,7 @@ Description by  [Nikola Ubavić](https://ubavic.rs/work/julia_and_mandelbrot_set
 
 ### z^2 -1.401155 - 1.0/c
 
-Fifth example: p =  -1.401155 - 1.0/c
+Here: p =  -1.401155 - 1.0/c
 
   
 
@@ -82,14 +80,20 @@ Fifth example: p =  -1.401155 - 1.0/c
 
 ### Exponential map
 
-Where
-* c = c0 + cexp(x + i y) 
-* x + i y = clog(c - c0)
-* with scaling by 2pi/width
+Here : p = cf + cexp(parameter
+
+where 
+* cf is the Feigenbaum point -1.401155 = Accumulation point of period-doubling
 
 
 
 
+
+[Period doubling cascade](https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/1over2_family): 
+* one can see 7 hyperbolic components  for periods 2^0, 2^1, 2^2, 2^3, 2^4, 2^5, 2^6
+* note that each componnet has tha same size 
+   
+![](./png/LCM_c_log_5000_-8.400000_2.400000_600.png)
 
 
 
