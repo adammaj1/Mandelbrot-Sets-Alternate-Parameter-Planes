@@ -14,10 +14,21 @@ Here initial parameter p is transformed:
 
     p = t(p)
     
+So the whole plane (more precisely  rectangle viewport) is transformed. For example for c_exponnetial 
+
+```
+	plane before transformation 
+xMin  = -8.9000000000000004 	 xMax = 0.7000000000000000 
+yMin  = -2.3999999999999999 	 yMax = 2.3999999999999999 
+	plane after transformation 
+xMin  = -1.4010186110735179 	 xMax = 0.6125977074704767 
+yMin  = -0.6754631805511510 	 yMax = 0.6754631805511510 
+```
+    
     
 ###  z^2 + c
 
-First example is simple: p = c
+First example is simple: p = p
 
   
 ![](./png/LCM_c_5000_-0.750000_1.500000_600.png)
