@@ -9,10 +9,11 @@ Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_
 
 ## z^2+p family
 
-Here 
+Here initial parameter p is transformed:   
 
 
-    p = t(c)
+    p = t(p)
+    
     
 ###  z^2 + c
 
@@ -28,7 +29,7 @@ Description by  [David E. Joyce](https://mathcs.clarku.edu/~djoyce/julia/altplan
 
 ### z^2 + 1/c
 
-Second example is simple inversion. Here p = 1/c
+Second example is simple inversion. Here p = 1/p
 
   
 ![](./png/LCM_c_inverted_5000_1.330000_2.700000_600.png)
@@ -45,14 +46,14 @@ Description by  [Nikola Ubavić](https://ubavic.rs/work/julia_and_mandelbrot_set
 
 ### z^2 -2.0+1.0/c
 
-Here : p =  -2.0+1.0/c
+Here : p =  -2.0+1.0/p
 
 ![](./png/LCM_c_inverted_2_5000_2.000000_5.000000_600.png)
 
 
 ### z^2 + 0.25+1.0/c
 
-Here: p =  0.25 + 1.0/c
+Here: p =  0.25 + 1.0/p
 
 
   
@@ -70,7 +71,7 @@ Description by  [Nikola Ubavić](https://ubavic.rs/work/julia_and_mandelbrot_set
 
 ### z^2 -1.401155 - 1.0/c
 
-Here: p =  -1.401155 - 1.0/c
+Here: p =  -1.401155 - 1.0/p
 
   
 
@@ -80,7 +81,7 @@ Here: p =  -1.401155 - 1.0/c
 
 ### Exponential map
 
-Here : p = cf + cexp(parameter
+Here : p = cf + cexp(p)
 
 where 
 * cf is the Feigenbaum point -1.401155 = Accumulation point of period-doubling
