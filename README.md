@@ -7,12 +7,12 @@
 Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)
 
 
-## z^2+p family
+## z^2+c family
 
 Here initial parameter p is transformed:   
 
 
-    p = t(p)
+    c = t(p)
     
 So the whole plane (more precisely  rectangle viewport) is transformed. For example for c_exponnetial 
 
@@ -28,7 +28,7 @@ yMin  = -0.6754631805511510 	 yMax = 0.6754631805511510
     
 ###  z^2 + c
 
-First example is simple: p = p
+First example is simple: c = p
 
   
 ![](./png/LCM_c_5000_-0.750000_1.500000_600.png)
@@ -38,9 +38,9 @@ Description by  [David E. Joyce](https://mathcs.clarku.edu/~djoyce/julia/altplan
 
 
 
-### z^2 + 1/c
+### z^2 + 1/p
 
-Second example is simple inversion. Here p = 1/p
+Second example is simple inversion. Here c = 1/p
 
   
 ![](./png/LCM_c_inverted_5000_1.330000_2.700000_600.png)
@@ -55,16 +55,16 @@ Description by  [Nikola Ubavić](https://ubavic.rs/work/julia_and_mandelbrot_set
 > The inverse of the cardioid is the exterior of a teardrop shape. The circles on the outside of the cardioid are inverted to circles on the inside of the teardrop. The cusp of the cardioid becomes the cusp of the teardrop.
 
 
-### z^2 -2.0+1.0/c
+### z^2 -2.0+1.0/p
 
-Here : p =  -2.0+1.0/p
+Here : c =  -2.0+1.0/p
 
 ![](./png/LCM_c_inverted_2_5000_2.000000_5.000000_600.png)
 
 
-### z^2 + 0.25+1.0/c
+### z^2 + 0.25+1.0/p
 
-Here: p =  0.25 + 1.0/p
+Here: c =  0.25 + 1.0/p
 
 
   
@@ -80,9 +80,9 @@ Description by  [Nikola Ubavić](https://ubavic.rs/work/julia_and_mandelbrot_set
 > The circles on the outside of the cardioid are inverted to circles on the inside of the parabola.
 
 
-### z^2 -1.401155 - 1.0/c
+### z^2 -1.401155 - 1.0/p
 
-Here: p =  -1.401155 - 1.0/p
+Here: c =  -1.401155 - 1.0/p
 
   
 
@@ -92,7 +92,7 @@ Here: p =  -1.401155 - 1.0/p
 
 ### Exponential map
 
-Here : p = cf + cexp(p)
+Here : c = cf + cexp(p)
 
 where 
 * cf is the Feigenbaum point -1.401155 = Accumulation point of period-doubling
@@ -109,20 +109,27 @@ where
 
 
 
-## p*z*(z-1) = logistic family
+## m*z*(z-1) = logistic family
 
 
   m*z*(1.0-z)
   
+so here m = p  
+  
+  
 ![](./png/LCM_lambda_5000_1.000000_3.200000_600.png)
 
 
-  z*(1.0-z)/m
+  z*(1.0-z)/p
+  
+here m = 1/p
 
 ![](./png/LCM_lambda_inverted_5000_0.000000_1.120000_600.png)
 
 
-  (1 + 1/m)*z*(1.0-z)
+  (1 + 1/p)*z*(1.0-z)
+  
+here m = 1 + 1/p
 
 
 ![](./png/LCM_lambda_inverted_1_5000_0.000000_1.100000_600.png)  
