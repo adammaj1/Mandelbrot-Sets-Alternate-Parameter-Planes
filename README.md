@@ -40,7 +40,7 @@ Description by  [David E. Joyce](https://mathcs.clarku.edu/~djoyce/julia/altplan
 
 ### z^2 + 1/p
 
-Second example is simple inversion. Here c = 1/p
+Second example is [simple inversion](https://mathworld.wolfram.com/Inversion.html). Here c = 1/p
 
   
 ![](./png/LCM_c_inverted_5000_1.330000_2.700000_600.png)
@@ -92,7 +92,7 @@ Here: c =  -1.401155 - 1.0/p
 
 ### Exponential map
 
-Here : c = cf + cexp(p)
+Here : c = cf + e^p
 
 where 
 * cf is the Feigenbaum point -1.401155 = Accumulation point of period-doubling
@@ -135,7 +135,8 @@ here m = 1 + 1/p
 ![](./png/LCM_lambda_inverted_1_5000_0.000000_1.100000_600.png)  
 
 
-
+Compare
+* [changing the inversion offset for the lambda plane mandelbrot by https://www.youtube.com/channel/UCdOI0EQgdwiRbIafRkd8SHw](https://www.youtube.com/watch?v=Xob9xZ2dBIs). Here m = k + 1/p where k is changing from 0 to 2 
 
 
 
