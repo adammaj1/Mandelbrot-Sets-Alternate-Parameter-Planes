@@ -36,11 +36,19 @@ First example is simple: c = p
 Description by  [David E. Joyce](https://mathcs.clarku.edu/~djoyce/julia/altplane.html)  
 >  the most notable feature of the set is a cardioid 
 
+### z^2 + (k +1/p)
+
+Here 
+
+c = k + 1/p
+
+translation is performed before the inversion
 
 
-### z^2 + 1/p
 
-Second example is [simple inversion](https://mathworld.wolfram.com/Inversion.html). Here c = 1/p
+####  z^2 + 1/p
+
+Second example is [simple inversion](https://mathworld.wolfram.com/Inversion.html). Here c = 1/p ( and k = 0 so no translation , simply inversion about a init circle centered at origin  )
 
   
 ![](./png/LCM_c_inverted_5000_1.330000_2.700000_600.png)
@@ -55,16 +63,16 @@ Description by  [Nikola Ubavić](https://ubavic.rs/work/julia_and_mandelbrot_set
 > The inverse of the cardioid is the exterior of a teardrop shape. The circles on the outside of the cardioid are inverted to circles on the inside of the teardrop. The cusp of the cardioid becomes the cusp of the teardrop.
 
 
-### z^2 -2.0+1.0/p
+#### z^2 -2.0+1.0/p
 
-Here : c =  -2.0+1.0/p
+Here : c =  -2.0+1.0/p ( and k = -2)
 
 ![](./png/LCM_c_inverted_2_5000_2.000000_5.000000_600.png)
 
 
-### z^2 + 0.25+1.0/p
+####  z^2 + 0.25+1.0/p
 
-Here: c =  0.25 + 1.0/p
+Here: c =  0.25 + 1.0/p ( and k = 0.25)
 
 
   
@@ -80,7 +88,7 @@ Description by  [Nikola Ubavić](https://ubavic.rs/work/julia_and_mandelbrot_set
 > The circles on the outside of the cardioid are inverted to circles on the inside of the parabola.
 
 
-### z^2 -1.401155 - 1.0/p
+#### z^2 -1.401155 - 1.0/p
 
 Here: c =  -1.401155 - 1.0/p
 
