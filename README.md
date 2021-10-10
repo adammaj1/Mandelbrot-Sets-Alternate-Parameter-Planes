@@ -34,7 +34,8 @@ First example is simple: c = p
 ![](./png/LCM_c_5000_-0.750000_1.500000_600.png)
 
 Description by  [David E. Joyce](https://mathcs.clarku.edu/~djoyce/julia/altplane.html)  
->  the most notable feature of the set is a cardioid 
+>  the most notable feature of the set is a cardioid. 
+
 
 ### z^2 + (k +1/p)
 
@@ -42,13 +43,21 @@ Here
 
 c = k + 1/p
 
-translation is performed before the inversion
+so this transformation consist of 2 
+* translation by k 
+* the inversion with respect to the unit circle centered at zero
 
 
+Translation is performed before inversion
+
+
+See [video by Max Million](https://www.youtube.com/watch?v=JiAIELoh4YU)
 
 ####  z^2 + 1/p
 
-Second example is [simple inversion](https://mathworld.wolfram.com/Inversion.html). Here c = 1/p ( and k = 0 so no translation , simply inversion about a init circle centered at origin  )
+Second example is [simple inversion](https://mathworld.wolfram.com/Inversion.html) about a unit circle centered at origin  
+
+Here c = 1/p ( and k = 0 so no translatio)  
 
   
 ![](./png/LCM_c_inverted_5000_1.330000_2.700000_600.png)
@@ -59,7 +68,7 @@ Description by  [Nikola Ubavić](https://ubavic.rs/work/julia_and_mandelbrot_set
 > composition of the inversion with respect to the unit circle centered at zero, and the conjugation (axial symmetry with respect to the real line). 
 > The cardioid from the boundary of the Mandelbrot set in the "standard" parameterization corresponds to the tear-shaped curve in the 1/c parameterization.
 
-
+Description by  [David E. Joyce](https://mathcs.clarku.edu/~djoyce/julia/altplane.html)  
 > The inverse of the cardioid is the exterior of a teardrop shape. The circles on the outside of the cardioid are inverted to circles on the inside of the teardrop. The cusp of the cardioid becomes the cusp of the teardrop.
 
 
