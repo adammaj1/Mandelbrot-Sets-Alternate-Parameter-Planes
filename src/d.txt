@@ -1,0 +1,270 @@
+this is txt output of d.c program
+
+info from Julia and Mandelbrot Sets. Alternate Parameter Planes by David E. Joyce © 1994.
+Mandelbrot Set (in the 1/(mu+.25) plane) : x in [-9.08763557,3.41706117]; y in [-5.62095252,5.74695361].
+Mandelbrot Set (in the 1/(mu-1.40115) plane) : x in [-6.89980824,6.49615956]; y in [-6.71624278,6.67972502].
+Mandelbrot Set (in the 1/(mu-2) plane) : x in [-2.32859532,-0.17140468]; y in [-0.93790897,0.93790897].
+Mandelbrot Set (in the 1/lambda plane) : x in [-1.15856298,1.05217571]; y in [-1.10369313,1.10704555].
+Mandelbrot Set (in the 1/(lambda-1) plane) : x in [-0.64246706,0.66013131]; y in [-1.08440356,1.08659373].
+
+=============================================================
+
+
+
+Image Width = 6.0000000000000000 in world coordinate
+PixelWidth = 0.0301507537688442 
+plane radius = 1.5000000000000000 
+plane center = -0.7500000000000000 +0.0000000000000000 
+	plane before transformation = p-plane
+xMin  = -3.7500000000000000 	 xMax = 2.2500000000000000 
+yMin  = -1.5000000000000000 	 yMax = 1.5000000000000000 
+	plane after transformation ( projection = modified c-plane  
+xMin  = -3.7500000000000000 	 xMax = 2.2500000000000000 
+yMin  = -1.5000000000000000 	 yMax = 1.5000000000000000 
+ratio of image  = 1.000000 ; it should be 1.000 ...
+Maximal number of iterations = iterMax_LSM = 10000 
+
+
+File c_simple_LSM_100_-0.750000_1.500000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File c_simple_LCM_100_-0.750000_1.500000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File c_simple_LSCM_100_-0.750000_1.500000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+==========================================================================================================================
+
+
+
+Image Width = 10.8000000000000007 in world coordinate
+PixelWidth = 0.0542713567839196 
+plane radius = 2.7000000000000002 
+plane center = 1.3300000000000001 +0.0000000000000000 
+	plane before transformation = p-plane
+xMin  = -4.0700000000000003 	 xMax = 6.7300000000000004 
+yMin  = -2.7000000000000002 	 yMax = 2.7000000000000002 
+	plane after transformation ( projection = modified c-plane  
+xMin  = -0.2457002457002457 	 xMax = 0.1485884101040119 
+yMin  = 0.3703703703703703 	 yMax = -0.3703703703703703 
+ratio of image  = 1.000000 ; it should be 1.000 ...
+Maximal number of iterations = iterMax_LSM = 10000 
+
+
+File c_inverted_LSM_100_1.330000_2.700000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File c_inverted_LCM_100_1.330000_2.700000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File c_inverted_LSCM_100_1.330000_2.700000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+==========================================================================================================================
+
+
+
+Image Width = 20.0000000000000000 in world coordinate
+PixelWidth = 0.1005025125628141 
+plane radius = 5.0000000000000000 
+plane center = 4.0000000000000000 +0.0000000000000000 
+	plane before transformation = p-plane
+xMin  = -6.0000000000000000 	 xMax = 14.0000000000000000 
+yMin  = -5.0000000000000000 	 yMax = 5.0000000000000000 
+	plane after transformation ( projection = modified c-plane  
+xMin  = 0.0833333333333333 	 xMax = 0.3214285714285714 
+yMin  = 0.2000000000000000 	 yMax = -0.2000000000000000 
+ratio of image  = 1.000000 ; it should be 1.000 ...
+Maximal number of iterations = iterMax_LSM = 10000 
+
+
+File c_parabola_LSM_100_4.000000_5.000000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File c_parabola_LCM_100_4.000000_5.000000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File c_parabola_LSCM_100_4.000000_5.000000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+==========================================================================================================================
+
+
+
+Image Width = 1602.7999999999999545 in world coordinate
+PixelWidth = 8.0542713567839197 
+plane radius = 400.6999999999999886 
+plane center = 1.3300000000000001 +0.0000000000000000 
+	plane before transformation = p-plane
+xMin  = -800.0699999999999363 	 xMax = 802.7300000000000182 
+yMin  = -400.6999999999999886 	 yMax = 400.6999999999999886 
+	plane after transformation ( projection = modified c-plane  
+xMin  = -1.3999051093654304 	 xMax = -1.4024007488819403 
+yMin  = -0.0024956326428750 	 yMax = 0.0024956326428750 
+ratio of image  = 1.000000 ; it should be 1.000 ...
+Maximal number of iterations = iterMax_LSM = 10000 
+
+
+File c_Myrberg_LSM_100_1.330000_400.700000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File c_Myrberg_LCM_100_1.330000_400.700000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File c_Myrberg_LSCM_100_1.330000_400.700000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+==========================================================================================================================
+
+
+
+Image Width = 20.0000000000000000 in world coordinate
+PixelWidth = 0.1005025125628141 
+plane radius = 5.0000000000000000 
+plane center = 2.0000000000000000 +0.0000000000000000 
+	plane before transformation = p-plane
+xMin  = -8.0000000000000000 	 xMax = 12.0000000000000000 
+yMin  = -5.0000000000000000 	 yMax = 5.0000000000000000 
+	plane after transformation ( projection = modified c-plane  
+xMin  = -2.1250000000000000 	 xMax = -1.9166666666666667 
+yMin  = 0.2000000000000000 	 yMax = -0.2000000000000000 
+ratio of image  = 1.000000 ; it should be 1.000 ...
+Maximal number of iterations = iterMax_LSM = 10000 
+
+
+File c_inverted2_LSM_100_2.000000_5.000000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File c_inverted2_LCM_100_2.000000_5.000000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File c_inverted2_LSCM_100_2.000000_5.000000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+==========================================================================================================================
+
+
+
+Image Width = 9.5999999999999996 in world coordinate
+PixelWidth = 0.0482412060301508 
+plane radius = 2.3999999999999999 
+plane center = -8.4000000000000004 +0.0000000000000000 
+	plane before transformation = p-plane
+xMin  = -8.9000000000000004 	 xMax = 0.7000000000000000 
+yMin  = -2.3999999999999999 	 yMax = 2.3999999999999999 
+	plane after transformation ( projection = modified c-plane  
+xMin  = -1.4010186110735179 	 xMax = 0.6125977074704767 
+yMin  = -0.6754631805511510 	 yMax = 0.6754631805511510 
+ratio of image  = 1.000000 ; it should be 1.000 ...
+Maximal number of iterations = iterMax_LSM = 10000 
+
+
+File c_exp_LSM_100_-8.400000_2.400000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File c_exp_LCM_100_-8.400000_2.400000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File c_exp_LSCM_100_-8.400000_2.400000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+==========================================================================================================================
+
+
+
+Image Width = 12.8000000000000007 in world coordinate
+PixelWidth = 0.0643216080402010 
+plane radius = 3.2000000000000002 
+plane center = 1.0000000000000000 +0.0000000000000000 
+	plane before transformation = p-plane
+xMin  = -5.4000000000000004 	 xMax = 7.4000000000000004 
+yMin  = -3.2000000000000002 	 yMax = 3.2000000000000002 
+	plane after transformation ( projection = modified c-plane  
+xMin  = -5.4000000000000004 	 xMax = 7.4000000000000004 
+yMin  = -3.2000000000000002 	 yMax = 3.2000000000000002 
+ratio of image  = 1.000000 ; it should be 1.000 ...
+Maximal number of iterations = iterMax_LSM = 10000 
+
+
+File lambda_simple_LSM_100_1.000000_3.200000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File lambda_simple_LCM_100_1.000000_3.200000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File lambda_simple_LSCM_100_1.000000_3.200000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+==========================================================================================================================
+
+
+
+Image Width = 4.4800000000000004 in world coordinate
+PixelWidth = 0.0225125628140704 
+plane radius = 1.1200000000000001 
+plane center = 0.0000000000000000 +0.0000000000000000 
+	plane before transformation = p-plane
+xMin  = -2.2400000000000002 	 xMax = 2.2400000000000002 
+yMin  = -1.1200000000000001 	 yMax = 1.1200000000000001 
+	plane after transformation ( projection = modified c-plane  
+xMin  = -0.4464285714285714 	 xMax = 0.4464285714285714 
+yMin  = 0.8928571428571428 	 yMax = -0.8928571428571428 
+ratio of image  = 1.000000 ; it should be 1.000 ...
+Maximal number of iterations = iterMax_LSM = 10000 
+
+
+File lambda_inv_LSM_100_0.000000_1.120000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File lambda_inv_LCM_100_0.000000_1.120000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File lambda_inv_LSCM_100_0.000000_1.120000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+==========================================================================================================================
+
+
+
+Image Width = 4.4000000000000004 in world coordinate
+PixelWidth = 0.0221105527638191 
+plane radius = 1.1000000000000001 
+plane center = 0.0000000000000000 +0.0000000000000000 
+	plane before transformation = p-plane
+xMin  = -2.2000000000000002 	 xMax = 2.2000000000000002 
+yMin  = -1.1000000000000001 	 yMax = 1.1000000000000001 
+	plane after transformation ( projection = modified c-plane  
+xMin  = 0.5454545454545454 	 xMax = 1.4545454545454546 
+yMin  = 0.9090909090909091 	 yMax = -0.9090909090909091 
+ratio of image  = 1.000000 ; it should be 1.000 ...
+Maximal number of iterations = iterMax_LSM = 10000 
+
+
+File lambda_inverted_1_LSM_100_0.000000_1.100000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File lambda_inverted_1_LCM_100_0.000000_1.100000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+File lambda_inverted_1_LSCM_100_0.000000_1.100000.pgm saved . Comment = one parameter family of complex quadratic polynomial, parameter plane  
+==========================================================================================================================
+
+
+
+===========================================================================================================================================================================================
+
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+  _OPENMP = '201511'
+  OMP_DYNAMIC = 'FALSE'
+  OMP_NESTED = 'FALSE'
+  OMP_NUM_THREADS = '8'
+  OMP_SCHEDULE = 'DYNAMIC'
+  OMP_PROC_BIND = 'FALSE'
+  OMP_PLACES = ''
+  OMP_STACKSIZE = '0'
+  OMP_WAIT_POLICY = 'PASSIVE'
+  OMP_THREAD_LIMIT = '4294967295'
+  OMP_MAX_ACTIVE_LEVELS = '1'
+  OMP_CANCELLATION = 'FALSE'
+  OMP_DEFAULT_DEVICE = '0'
+  OMP_MAX_TASK_PRIORITY = '0'
+  OMP_DISPLAY_AFFINITY = 'FALSE'
+  OMP_AFFINITY_FORMAT = 'level %L thread %i affinity %A'
+  OMP_ALLOCATOR = 'omp_default_mem_alloc'
+  OMP_TARGET_OFFLOAD = 'DEFAULT'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+info about software 
+
+
+
+
+
+GNU bash, wersja 5.1.4(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2020 Free Software Foundation, Inc.
+Licencja GPLv3+: GNU GPL wersja 3 lub późniejsza <http://gnu.org/licenses/gpl.html>
+
+To oprogramowanie jest wolnodostępne; można je swobodnie zmieniać i rozpowszechniać.
+Nie ma ŻADNEJ GWARANCJI w granicach dopuszczanych przez prawo.
+GNU Make 4.3
+Ten program został zbudowany dla systemu x86_64-pc-linux-gnu
+Copyright (C) 1988-2020 Free Software Foundation, Inc.
+Licencja GPLv3+: GNU GPL wersja 3 lub nowsza <http://gnu.org/licenses/gpl.html>
+To oprogramowanie jest wolnodostępne: można je swobodnie zmieniać i rozpowszechniać.
+Nie ma ŻADNEJ GWARANCJI w zakresie dopuszczalnym przez prawo.
+gcc (Ubuntu 10.3.0-1ubuntu1) 10.3.0
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Version: ImageMagick 6.9.11-60 Q16 x86_64 2021-01-25 https://imagemagick.org
+Copyright: (C) 1999-2021 ImageMagick Studio LLC
+License: https://imagemagick.org/script/license.php
+Features: Cipher DPC Modules OpenMP(4.5) 
+Delegates (built-in): bzlib djvu fftw fontconfig freetype heic jbig jng jp2 jpeg lcms lqr ltdl lzma openexr pangocairo png tiff webp wmf x xml zlib
+Resource limits:
+  Width: 1MP
+  Height: 1MP
+  List length: unlimited
+  Area: 128MP
+  Memory: 256MiB
+  Map: 512MiB
+  Disk: 10GiB
+  File: 768
+  Thread: 8
+  Throttle: 0
+  Time: unlimited
+
+ 
+gcc version: 10.3.0
