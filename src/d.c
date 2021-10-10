@@ -45,13 +45,18 @@ The collection of quadratic polynomials can be parameterized in different ways w
   Structure of a program or how to analyze the program 
   
   
-  ============== Image X ========================
   
-  DrawImageOfX -> DrawPointOfX -> ComputeColorOfX 
+  Creating graphic:
+  * memory array
+  * save it to the disk as a pgm file
+  * convert pgm file to png usnigng Image Magic convert
   
-  first 2 functions are identical for every X
-  check only last function =  ComputeColorOfX
-  which computes color of one pixel !
+  
+  creating image
+  * rectangle from complex plane: p= plane
+  * map it to the c plane: for each pixel of plane compute c or lambda using  map_parameter
+  
+  
   
   
 
@@ -126,7 +131,7 @@ sys	0m0,161s
 
 /* --------------------------------- global variables and consts ------------------------------------------------------------ */
 
-#define NoP 8 // number of parameter types; see ParameterTypeT
+#define PMAX 9 // number of parameter types; see ParameterTypeT !!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
@@ -141,9 +146,19 @@ typedef enum  {LSM , DEM, Unknown, BD, MBD , SAC, DLD, ND, NP, POT, Blend
 
 
 /*
-
+family  and parameter
 */
-typedef enum  {c_type, c_inverted_type, c_parabola_type, c_Myrberg_type, c_inverted_2_type, lambda_type , lambda_inverted_type, lambda_inverted_1_type
+typedef enum  { // c family : z^2+c family
+		c_identity = 0, // https://en.wikipedia.org/wiki/Identity_function
+		c_inverted = 1, 
+		c_parabola = 2, 
+		c_Myrberg_type = 3 , 
+		c_inverted_2_type = 4, 
+		c_exp = 5,
+		// lambda family : m*z*(1-z)
+		lambda_identity = 6, // https://en.wikipedia.org/wiki/Identity_function
+		lambda_inverted_type = 7, 
+		lambda_inverted_1_type = 8 
 		
 		} ParameterTypeT; 
 
@@ -159,7 +174,7 @@ static unsigned int iWidth;	// horizontal dimension of array
 static unsigned int iyMin = 0;	// Indexes of array starts from 0 not 1
 static unsigned int iyMax;	//
 
-static unsigned int iHeight = 5000;	//  
+static unsigned int iHeight = 100;	//  
 // The size of array has to be a positive constant integer 
 static unsigned int iSize;	// = iWidth*iHeight; 
 
@@ -230,17 +245,22 @@ Mandelbrot Set (in the 1/(lambda-1) plane) : x in [-0.64246706,0.66013131]; y in
 
 
 */
-// see set_plane				c 	c_inv 	c_par 	c_Myr 	c_2	lambda	lambd_inv
+// see set_plane				c 	c_inv 	c_par 	c_Myr 	c_2	c_exp	lambda	l_inv	l_i_2
 
 
-const double plane_radii[NoP] = 		{1.5, 	2.7, 	5.0, 	400.7, 	5.0, 	3.2,	1.12,	1.1};
+const double plane_radii[PMAX] = 		{1.5, 	2.7, 	5.0, 	400.7, 	5.0, 	2.4,	3.2,	1.12,	1.1};
 
-const complex double plane_centers[NoP] = 	{-0.75, 1.33, 	4.0, 	1.33, 	2.0,	1.0,	0.0,	0.0};
+const complex double plane_centers[PMAX] = 	{-0.75, 1.33, 	4.0, 	1.33, 	2.0,	-8.4,	1.0, 	0.0,	0.0};
 
 
-const complex double critical_points[NoP] = 	{0.0, 	0.0, 	0.0, 	0.0, 	0.0, 	0.5, 	0.5,	0.5};
+const complex double critical_points[PMAX] = 	{0.0, 	0.0, 	0.0, 	0.0, 	0.0, 	0.0, 	0.5, 	0.5,	0.5};
 
-const double  DisplayAspectRatio  = 1.0; // https://en.wikipedia.org/wiki/Aspect_ratio_(image)
+const double  DisplayAspectRatio  = 2.0; // https://en.wikipedia.org/wiki/Aspect_ratio_(image)
+
+
+
+
+const complex double cf = - 1.401155; //the Feigenbaum point -1.401155
 
 
 
@@ -267,14 +287,14 @@ double ratio;
 
 
 
-const int iterMax_LSM = 2000;
+const int iterMax_LSM = 10000;
 
 
 // EscapeRadius for bailout test 
-double ER = 200.0;	
+double ER = 2000.0;	
 
 
-double BoundaryWidth = 3.0; // % of image width  
+double BoundaryWidth = 1.0; // % of image width  
 double distanceMax; //distanceMax = BoundaryWidth*PixelWidth;
 
 
@@ -290,24 +310,26 @@ unsigned char iColorOfUnknown = 30;
 
 /* ------------------------------------------ functions -------------------------------------------------------------*/
 
-// complex function
+// complex function. 
 complex double f(const ParameterTypeT ParameterType, const double complex zn , const complex double p ) {
 
   	complex double z = zn;
   
   	switch(ParameterType){
 	
-		case c_type :		 // complex quadratic polynomial
+		case c_identity :		 // complex quadratic polynomial
 		
-		case c_inverted_type :	 //  p is inverted in give_parameter function
+		case c_inverted :	 //  p is inverted in give_parameter function
 		
-		case c_parabola_type :	 // p is changed in give_parameter function
+		case c_parabola :	 // p is changed in give_parameter function
 		
 		case c_Myrberg_type :	 // p is changed in give_parameter function
 			
-		case c_inverted_2_type :	{z = z*z + p;  break;} // p is changed in give_parameter function
+		case c_inverted_2_type :
 		
-		case lambda_type :		 // p is changed in give_parameter function
+		case c_exp :		{z = z*z + p;  break;} // p is changed in give_parameter function
+		
+		case lambda_identity :		 // p is changed in give_parameter function
 		
 		case lambda_inverted_type :		// p is changed in give_parameter function
 		
@@ -354,86 +376,36 @@ static inline complex double Give_p (const int ix, const int iy)
 }
 
 
-/*
-https://mathcs.clarku.edu/~djoyce/julia/MandelbrotColorPlane.java
-
-public static Complex convert (Complex z, int oldPlane, int newPlane) {
-    if (oldPlane == newPlane)
-       return new Complex(z);
-    // first convert from the old plane to either the lambda or the mu plane
-    if (oldPlane != MU && oldPlane != LAMBDA) {
-      z = z.reciprocal();
-      if (oldPlane == RECIPMUPLUSFOURTH)
-        z = z.minus(0.25);
-      else if (oldPlane == RECIPLAMBDAMINUSONE)
-        z = z.plus(1.0);
-      else if (oldPlane == RECIPMUMINUSMYER)
-        z = z.plus(MYERBERG);
-    } // if
-    // next, convert to mu or lambda as necessary
-    if (oldPlane==LAMBDA || oldPlane==RECIPLAMBDA || oldPlane==RECIPLAMBDAMINUSONE) {
-      if (newPlane!=LAMBDA && newPlane!=RECIPLAMBDA && newPlane!=RECIPLAMBDAMINUSONE) {
-        // convert lambda to mu.  mu = (lambda/2)^2 - (lambda/2)
-        z = z.over(2.0);
-        z = z.times(z).minus(z);
-      } // if
-    } else {
-      if (newPlane==LAMBDA || newPlane==RECIPLAMBDA || newPlane==RECIPLAMBDAMINUSONE) {
-        // convert mu to lambda.  lambda = 1 + sqrt(1+4mu)
-        z = z.times(4.0).plus(1.0);
-        z = z.sqrt().plus(1.0);
-      } // if
-    } // if/else
-    // finally, convert to the new plane
-    switch (newPlane) {
-      case MU: return z;
-      case LAMBDA: return z;
-      case RECIPMU: return z.reciprocal();
-      case RECIPMUPLUSFOURTH: return z.plus(0.25).reciprocal();
-      case RECIPLAMBDA: return z.reciprocal();
-      case RECIPLAMBDAMINUSONE: return z.minus(1.0).reciprocal();
-      case RECIPMUMINUSMYER: return z.minus(MYERBERG).reciprocal();
-    } // switch
-    return z;  // never used, but makes compiler happy
-  } // convert
 
 
+// projection from p to c 
+complex double map_parameter(const ParameterTypeT ParameterType, const complex double parameter){
 
-
-
-
-
-c parameter is a reference plane 
-so all planes are compared to c 
-for simplicity
-
-*/
-complex double give_parameter(const ParameterTypeT ParameterType, const int ix, const int iy){
-
-
-	complex double parameter= Give_p(ix,iy);
-  	
-
-
+	
+	complex double p; 
+	// plane transformation 
 	switch(ParameterType){
 	
-		case c_type :{  break;}
+		case c_identity :{p = parameter;  break;}
 		
-		case c_inverted_type :{parameter = 1.0/parameter; break;}
+		case c_inverted :{p = 1.0/parameter; break;}
 		
-		case c_parabola_type :{parameter = 0.25+ 1.0/parameter; break;}
+		case c_parabola :{p = 0.25+ 1.0/parameter; break;}
 		
-		case c_Myrberg_type :{parameter = -1.401155 - 1.0/parameter; break;}
+		case c_Myrberg_type :{p = cf - 1.0/parameter; break;}
 		
-		case c_inverted_2_type :{parameter = -2.0 + 1.0/parameter; break;}
+		case c_inverted_2_type :{p = -2.0 + 1.0/parameter; break;}
 		
-		case lambda_type :{  break;}
+		case c_exp :{p = cf + cexp(parameter) ; break;} // here one can change cf to get different image 
 		
-		case lambda_inverted_type :{parameter = 1.0/parameter; break;}
 		
-		case lambda_inverted_1_type :{parameter =1.0+ 1.0/parameter; break;}
+		case lambda_identity :{ p = parameter;  break;}
 		
-		default: {}
+		case lambda_inverted_type :{p = 1.0/parameter; break;}
+		
+		case lambda_inverted_1_type :{p =1.0+ 1.0/parameter; break;}
+		
+		default: {p = parameter;}
 	
 	
 	}
@@ -443,7 +415,25 @@ complex double give_parameter(const ParameterTypeT ParameterType, const int ix, 
 
   
 	
-  return parameter;
+  return p;
+
+
+}
+
+
+
+
+complex double give_parameter(const ParameterTypeT ParameterType, const int ix, const int iy){
+
+	// initial value of parameter
+	complex double parameter= Give_p(ix,iy);
+  	
+
+	parameter = map_parameter(ParameterType, parameter);
+
+  
+	
+  	return parameter;
 	
 	
 
@@ -459,11 +449,26 @@ int set_plane(const ParameterTypeT ParameterType){
 
 	complex double center = plane_centers[ParameterType];
 	double radius = plane_radii[ParameterType];
+	
+	if (ParameterType != c_exp)
+		{	
 
-  	xMin = creal(center) - radius*DisplayAspectRatio;	
-  	xMax = creal(center) + radius*DisplayAspectRatio;	//0.75;
-  	yMin = cimag(center) - radius;	// inv
-  	yMax = cimag(center) + radius;	//0.7;
+			
+
+  			xMin = creal(center) - radius*DisplayAspectRatio;	
+  			xMax = creal(center) + radius*DisplayAspectRatio;	//0.75;
+  			yMin = cimag(center) - radius;	// inv
+  			yMax = cimag(center) + radius;	//0.7;
+  		}
+  		
+  		else {
+  		
+  				
+  			xMax = 0.7; //  gives  0.5089024742041425 after transformation
+  			xMin = xMax - 2.0*radius*DisplayAspectRatio; // 
+  			yMin = cimag(center) - radius;	// inv
+  			yMax = cimag(center) + radius;	//0.7;
+  		}
   	
   	return 0;
 
@@ -479,12 +484,19 @@ void print_local_info(const RepresentationFunctionTypeT RepresentationFunctionTy
   	printf ("plane radius = %.16f \n", plane_radii[ParameterType]);
   	complex double c = plane_centers[ParameterType];
   	printf ("plane center = %.16f %+.16f \n", creal(c),cimag(c) );
+  	printf ("\tplane before transformation = p-plane\n" );
   	printf ("xMin  = %.16f \t xMax = %.16f \n", xMin, xMax );
   	printf ("yMin  = %.16f \t yMax = %.16f \n", yMin, yMax );
+  	printf ("\tplane after transformation ( projection = modified c-plane  \n" );
+  	printf ("xMin  = %.16f \t xMax = %.16f \n", creal(map_parameter(ParameterType,xMin)) , creal(map_parameter(ParameterType,xMax)) );
+  	printf ("yMin  = %.16f \t yMax = %.16f \n", cimag(map_parameter(ParameterType,yMin*I)), cimag(map_parameter(ParameterType,yMax*I)) );
+  	
+  	
+  	
     	printf ("ratio of image  = %f ; it should be 1.000 ...\n", ratio);
   
   	
-  	 
+  	 // map_parameter(const ParameterTypeT ParameterType, const complex double parameter)
   	// image corners in world coordinate
   	// center and radius
   	// center and zoom
@@ -493,7 +505,7 @@ void print_local_info(const RepresentationFunctionTypeT RepresentationFunctionTy
   	
   	printf ("Maximal number of iterations = iterMax_LSM = %d \n", iterMax_LSM);
  
-  	printf("\n");
+  	printf("\n\n");
   
   	
   //
@@ -729,33 +741,28 @@ int DrawImage (const RepresentationFunctionTypeT RepresentationFunctionType, con
 
 
 
-
-
-
  
 // *******************************************************************************************
 // ********************************** save A array to pgm file ****************************
 // *********************************************************************************************
 
-int SaveImage(const unsigned char A[], const ParameterTypeT ParameterType, const char *shortName , const char *comment)
+int SaveImage(const unsigned char A[], const char *shortName )
 {
 
   FILE *fp;
   const unsigned int MaxColorComponentValue = 255;	/* color component is coded from 0 to 255 ;  it is 8 bit color file */
   
-  int n = iHeight;
-  double center = plane_centers[ParameterType];
-  double r = plane_radii[ParameterType];
+  
   
   // https://programmerfish.com/create-output-file-names-using-a-variable-in-c-c/
   char fileName[512];
   const char* fileType = ".pgm";
-  sprintf(fileName,"%s_%d_%f_%f%s", shortName, n, center,r, fileType); // 
+  sprintf(fileName,"%s%s", shortName, fileType); // 
   
   
   
   char long_comment[200];
-  sprintf (long_comment, "one parameter family of complex quadratic polynomial, parameter plane ;  %s", comment);
+  sprintf (long_comment, "one parameter family of complex quadratic polynomial, parameter plane ");
 
 
 
@@ -786,14 +793,85 @@ int SaveImage(const unsigned char A[], const ParameterTypeT ParameterType, const
 
 
 
+const char* GiveName(const char *sRepresentationFunction, const ParameterTypeT ParameterType)
+{
+
+	static char Name[512];
+	int h = iHeight;
+  	double center = plane_centers[ParameterType];
+  	double r = plane_radii[ParameterType];
+    	
+    	const char* sP; // 
+    	
+    	
+    	
+    	switch(ParameterType){
+	
+		case c_identity : 		{sP = "c_simple"; break;}
+		
+		case c_inverted :	{sP = "c_inverted"; break;}
+		
+		case c_parabola :	 {sP = "c_parabola"; break;}
+		
+		case c_Myrberg_type :	{sP = "c_Myrberg"; break;}
+			
+		case c_inverted_2_type : {sP = "c_inverted2"; break;}
+		
+		case c_exp :		{sP = "c_exp"; break;}
+		
+		case lambda_identity :		 {sP = "lambda_simple"; break;}
+		
+		case lambda_inverted_type :		{sP = "lambda_inv"; break;}
+		
+		case lambda_inverted_1_type :		{sP = "lambda_inverted_1"; break;}
+	
+		default: {sP = "a";}
+	
+	
+	}
+    	
+    	
+    	
+    	sprintf(Name,"%s_%s_%d_%f_%f",  sP, sRepresentationFunction, h, center, r);
+    	
+    	
+    
+    	return Name;
+}
 
 
 
 
+int MakeImages( const ParameterTypeT ParameterType){
+
+	const char *shortName;
+
+	DrawImage(LSM, ParameterType, data);
+	shortName = GiveName("LSM",  ParameterType);
+	SaveImage(data, shortName); 
+	
+	ComputeBoundaries(data,edge);
+	shortName = GiveName("LCM",  ParameterType);
+	SaveImage(edge, shortName); 
+	
+	CopyBoundaries(edge, data);
+	shortName = GiveName("LSCM",  ParameterType);
+	SaveImage(data, shortName); 
+	
+	printf("==========================================================================================================================\n\n\n\n");
+
+	return 0;
+
+}
 
 
 
 
+/*
+
+********************************************* info 
+
+*/
 
 
 
@@ -905,103 +983,10 @@ int main () {
   
 	setup ();
 	
-	//
-	DrawImage(LSM, c_type, data);
-	SaveImage(data, c_type, "LSM_c","LSM_c"); 
-	
-	ComputeBoundaries(data,edge);
-	SaveImage(edge, c_type, "LCM_c","LCM_c"); 
-	
-	CopyBoundaries(edge, data);
-	SaveImage(data, c_type, "LSCM_c","LSCM_c"); 
-  
- 	// 
-  
-  	DrawImage(LSM, c_inverted_type, data);
-	SaveImage(data, c_inverted_type, "LSM_c_inverted","LSM_c_inverted"); 
+	for (ParameterTypeT p = 0; p < PMAX; ++p)
+		MakeImages(p);
 	
 	
-	ComputeBoundaries(data,edge);
-	SaveImage(edge, c_inverted_type, "LCM_c_inverted","LCM_c_inverted"); 
-	
-	CopyBoundaries(edge, data);
-	SaveImage(data, c_inverted_type, "LSCM_c_inverted","LSCM_c_inverted"); 
-	
-	//
-	
-	
-	
-	DrawImage(LSM, c_parabola_type, data);
-	SaveImage(data, c_parabola_type, "LSM_c_parabola","LSM_c_parabola"); 
-	
-	ComputeBoundaries(data,edge);
-	SaveImage(edge, c_parabola_type, "LCM_c_parabola","LCM_c_parabola"); 
-	
-	CopyBoundaries(edge, data);
-	SaveImage(data, c_parabola_type, "LSCM_c_parabola","LSCM_c_parabola"); 
-	
-	//
-	
-	
-	
-	DrawImage(LSM, c_Myrberg_type, data);
-	SaveImage(data, c_Myrberg_type, "LSM_c_Myrberg","LSM_c_Myrberg"); 
-	
-	ComputeBoundaries(data,edge);
-	SaveImage(edge, c_Myrberg_type, "LCM_c_Myrberg","LCM_c_Myrberg"); 
-	
-	CopyBoundaries(edge, data);
-	SaveImage(data, c_Myrberg_type, "LSCM_c_Myrberg","LSCM_c_Myrberg"); 
-	
-	//
-	
-  
-  	DrawImage(LSM, c_inverted_2_type, data);
-	SaveImage(data, c_inverted_2_type, "LSM_c_inverted_2","LSM_c_inverted_2"); 
-	
-	ComputeBoundaries(data,edge);
-	SaveImage(edge, c_inverted_2_type, "LCM_c_inverted_2","LCM_c_inverted_2"); 
-	
-	CopyBoundaries(edge, data);
-	SaveImage(data, c_inverted_2_type, "LSCM_c_inverted_2","LSCM_c_inverted_2"); 
-	
-	//
-	
-	
-	
-	DrawImage(LSM, lambda_type, data);
-	SaveImage(data, lambda_type, "LSM_lambda","LSM_lambda"); 
-	
-	ComputeBoundaries(data,edge);
-	SaveImage(edge, lambda_type, "LCM_lambda","LCM_lambda"); 
-	
-	CopyBoundaries(edge, data);
-	SaveImage(data, lambda_type, "LSCM_lambda","LSCM_lambda"); 
-  
- 	// 
-	
-	
-	DrawImage(LSM, lambda_inverted_type, data);
-	SaveImage(data, lambda_inverted_type, "LSM_lambda_inverted","LSM_lambda_inverted"); 
-	
-	ComputeBoundaries(data,edge);
-	SaveImage(edge, lambda_inverted_type, "LCM_lambda_inverted","LCM_lambda_inverted"); 
-	
-	CopyBoundaries(edge, data);
-	SaveImage(data, lambda_inverted_type, "LSCM_lambda_inverted","LSCM_lambda_inverted"); 
-  
- 	// 
-	
-	
-	DrawImage(LSM, lambda_inverted_1_type, data);
-	SaveImage(data, lambda_inverted_1_type, "LSM_lambda_inverted_1","LSM_lambda_inverted_1"); 
-	
-	ComputeBoundaries(data,edge);
-	SaveImage(edge, lambda_inverted_1_type, "LCM_lambda_inverted_1","LCM_lambda_inverted_1"); 
-	
-	CopyBoundaries(edge, data);
-	SaveImage(data, lambda_inverted_1_type, "LSCM_lambda_inverted_1","LSCM_lambda_inverted_1"); 
- 
   	end();
 
   	return 0;
