@@ -48,7 +48,7 @@ so this transformation consist of 2
 * the inversion with respect to the unit circle centered at zero
 
 
-Translation is performed before inversion
+Translation is performed before inversion. It moves the set with respect to unit circle and thus changes the shape after the whole transformation
 
 
 See [video by Max Million](https://www.youtube.com/watch?v=JiAIELoh4YU)
@@ -95,6 +95,10 @@ Description by  [Nikola Ubavić](https://ubavic.rs/work/julia_and_mandelbrot_set
 > The cusp of the cardioid is then moved to the origin, and that inverts to infinity. 
 > the cardioid is sent to the outside of a parabola. 
 > The circles on the outside of the cardioid are inverted to circles on the inside of the parabola.
+
+
+Albert Chern: 
+> Since a cardioid is a Möbius inversion of a parabola, you find that the Mandelbrot set is actually a fractal growing along a parabola. 
 
 
 #### z^2 -1.401155 - 1.0/p
@@ -153,7 +157,7 @@ here m = 1 + 1/p
 
 
 Compare
-* [changing the inversion offset for the lambda plane mandelbrot by https://www.youtube.com/channel/UCdOI0EQgdwiRbIafRkd8SHw](https://www.youtube.com/watch?v=Xob9xZ2dBIs). Here m = k + 1/p where k is changing from 0 to 2 
+* [changing the inversion offset for the lambda plane mandelbrot by Max Million](https://www.youtube.com/watch?v=Xob9xZ2dBIs). Here m = k + 1/p where k is changing from 0 to 2 
 
 
 
@@ -162,6 +166,15 @@ Compare
 * [Mercator Mandelbrot Maps by: Anders Sandberg](https://www.flickr.com/photos/arenamontanus/albums/72157615740829949) : a logarithmic projection around a point c0: z-> (log(|z-c0|), arg(z-c0)). The idea for this kind of logarithmic map of the set is from [David Madore](http://www.madore.org/~david/math/mandelbrot.html). While it is a bit of a stretch to call it a Mercator projection, it sounds better than just a log scale map. If the Mandelbrot set is assumed to be about meter-sized these zooms reach the size of an atomic nucleus.  
 * transverse Mercator
   * [The North Transept Transfigurational Dreamwarp by Robert Lee](https://www.flickr.com/photos/robertlee99/50289710431/) : 
+* Riemann sphere
+  * [mathematica.stackexchange question: how-to-draw-fractal-images-of-iteration-functions-on-the-riemann-sphere](https://mathematica.stackexchange.com/questions/15047/how-to-draw-fractal-images-of-iteration-functions-on-the-riemann-sphere)
+* [Conformal_Warping_Around_The_Cardioid_In_The_Mandelbrot_Set](https://commons.wikimedia.org/wiki/File:Conformal_Warping_Around_The_Cardioid_In_The_Mandelbrot_Set.gif)
+* [distorted Mandelbrot by Ben's Fractals ](https://www.youtube.com/watch?v=xp-teLc9bxk)
+* Moebius by Claude
+  * [interpolating_moebius_transformations](https://mathr.co.uk/blog/2015-02-06_interpolating_moebius_transformations.html)
+  * [Moebius by  Claude Heiland-Allen](https://archive.org/details/MandelbrotMoebiusExperiments/mandelbrot_moebius_experiment_1.mkv)
+  * [moebius_transformations_and_the_riemann_sphere](https://mathr.co.uk/blog/2017-12-01_moebius_transformations_and_the_riemann_sphere.html)
+
 
 
 # Git
