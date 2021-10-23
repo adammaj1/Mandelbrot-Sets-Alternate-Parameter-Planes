@@ -175,7 +175,7 @@ Compare
 
 
 
-**Plane transformations **
+**Plane transformations**
     
 ```c
 
