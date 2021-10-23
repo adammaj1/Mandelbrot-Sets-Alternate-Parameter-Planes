@@ -209,11 +209,7 @@ complex double f(const FamilyTypeT FamilyType, const double complex z0 , const c
 ## Plane transformations
     
 ```c
-
-/* 
-  transformation = projection = map  from p 
-  to c or lambda parameter
-*/
+//    transformation = projection = map  from p    to c or lambda parameter
 complex double map_parameter(const ProjectionTypeT ProjectionType, const complex double parameter, const complex double translation){
 
 	
@@ -229,25 +225,11 @@ complex double map_parameter(const ProjectionTypeT ProjectionType, const complex
 		
 		
 		default: {p = parameter;}
-	
-	
 	}
-	
-
-
-
-  
-	
-  return p;
-
-
+	return p;
 }
-```   
+```
  
-
-
-
-
 
 
 # To do
