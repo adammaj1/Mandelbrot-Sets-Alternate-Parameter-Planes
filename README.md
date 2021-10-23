@@ -7,12 +7,21 @@
 Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)
 
 
+
+
+
+
+
+
 ## z^2+c family
 
 Here initial parameter p is transformed:   
 
 
     c = t(p)
+    
+  
+    
     
 So the whole plane (more precisely  rectangle viewport) is transformed. For example for c_exponnetial 
 
@@ -158,6 +167,78 @@ here m = 1 + 1/p
 
 Compare
 * [changing the inversion offset for the lambda plane mandelbrot by Max Million](https://www.youtube.com/watch?v=Xob9xZ2dBIs). Here m = k + 1/p where k is changing from 0 to 2 
+
+
+
+
+# Code
+
+
+
+**Plane transformations **
+    
+```c
+
+/* 
+  transformation = projection = map  from p 
+  to c or lambda parameter
+*/
+complex double map_parameter(const ProjectionTypeT ProjectionType, const complex double parameter, const complex double translation){
+
+	
+	complex double p; 
+	// plane transformation 
+	switch(ProjectionType){
+	
+		case identity :{p = translation + parameter;  break;} // first translation and then identity 
+		
+		case inversion :{p = translation + 1.0/parameter; break;} // first translation then inverion, 2 transformations
+		
+		case exponentiation :{p = translation + cexp(parameter) ; break;} // here one can change cf to get different image 
+		
+		
+		default: {p = parameter;}
+	
+	
+	}
+	
+
+
+
+  
+	
+  return p;
+
+
+}
+```  
+
+
+**Families of the complex quadratic polynomial**
+
+```c
+complex double f(const FamilyTypeT FamilyType, const double complex z0 , const complex double p ) {
+
+  	complex double z = z0;
+  
+  	switch(FamilyType){
+	
+		case c_type :		{z = z*z + p;  break;}	 // complex quadratic polynomial, p is changed in give_parameter function
+		
+		case lambda_type: 	{z = p*z*(1.0-z);  break;} // p is changed in give_parameter function
+	
+	
+		default: {z = z*z + p; }
+	
+	
+	}
+  
+  return  z;
+}
+	
+
+```
+
 
 
 
