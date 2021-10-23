@@ -174,8 +174,37 @@ Compare
 # Code
 
 
+##[Families ( forms)  of the complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial#Forms) 
+[Families ( forms)  of the complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial#Forms)
+```c
+complex double f(const FamilyTypeT FamilyType, const double complex z0 , const complex double p ) {
 
-**Plane transformations**
+  	complex double z = z0;
+  
+  	switch(FamilyType){
+	
+		case c_type :		{z = z*z + p;  break;}	 // complex quadratic polynomial, p is changed in give_parameter function
+		
+		case lambda_type: 	{z = p*z*(1.0-z);  break;} // p is changed in give_parameter function
+	
+	
+		default: {z = z*z + p; }
+	
+	
+	}
+  
+  return  z;
+}
+```
+
+## Algorithms
+* LCM = Level Curves Method = first compute level sets of escape time, then find boundaries of level sets  ( =  level curves ). Here Sobel filter is used  
+* DEM = Distance Estimation Method 
+  * [FF](https://fractalforums.org/programming/11/exterior-distance-estimation-for-logistic-map/4458)
+
+
+
+##Plane transformations
     
 ```c
 
@@ -211,33 +240,9 @@ complex double map_parameter(const ProjectionTypeT ProjectionType, const complex
 
 
 }
-```  
+```   
+ 
 
-
-**[Families ( forms)  of the complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial#Forms)**
-
-```c
-complex double f(const FamilyTypeT FamilyType, const double complex z0 , const complex double p ) {
-
-  	complex double z = z0;
-  
-  	switch(FamilyType){
-	
-		case c_type :		{z = z*z + p;  break;}	 // complex quadratic polynomial, p is changed in give_parameter function
-		
-		case lambda_type: 	{z = p*z*(1.0-z);  break;} // p is changed in give_parameter function
-	
-	
-		default: {z = z*z + p; }
-	
-	
-	}
-  
-  return  z;
-}
-	
-
-```
 
 
 
