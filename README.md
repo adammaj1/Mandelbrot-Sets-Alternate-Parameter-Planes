@@ -174,8 +174,10 @@ Compare
 # Code
 
 
-##[Families ( forms)  of the complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial#Forms) 
-[Families ( forms)  of the complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial#Forms)
+## Families ( forms)  of the complex quadratic polynomial 
+* [wikipedia](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial#Forms)
+
+
 ```c
 complex double f(const FamilyTypeT FamilyType, const double complex z0 , const complex double p ) {
 
