@@ -31,7 +31,7 @@ yMin  = -0.6754631805511510 	 yMax = 0.6754631805511510
 First example is simple: c = p
 
   
-![](./png/LCM_c_5000_-0.750000_1.500000_600.png)
+![](./img/LCM_c_5000_-0.750000_1.500000_600.png)
 
 Description by  [David E. Joyce](https://mathcs.clarku.edu/~djoyce/julia/altplane.html)  
 >  the most notable feature of the set is a cardioid. 
@@ -60,7 +60,7 @@ Second example is [simple inversion](https://mathworld.wolfram.com/Inversion.htm
 Here c = 1/p ( and k = 0 so no translatio)  
 
   
-![](./png/LCM_c_inverted_5000_1.330000_2.700000_600.png)
+![](./img/LCM_c_inverted_5000_1.330000_2.700000_600.png)
 
 
 
@@ -76,7 +76,7 @@ Description by  [David E. Joyce](https://mathcs.clarku.edu/~djoyce/julia/altplan
 
 Here : c =  -2.0+1.0/p ( and k = -2)
 
-![](./png/LCM_c_inverted_2_5000_2.000000_5.000000_600.png)
+![](./img/LCM_c_inverted_2_5000_2.000000_5.000000_600.png)
 
 
 ####  z^2 + 0.25+1.0/p
@@ -107,7 +107,7 @@ Here: c =  -1.401155 - 1.0/p
 
   
 
-![](./png/LCM_c_Myrberg_5000_1.330000_400.700000_600.png)
+![](./img/LCM_c_Myrberg_5000_1.330000_400.700000_600.png)
 
 
 
@@ -138,14 +138,14 @@ where
 so here m = p  
   
   
-![](./png/LCM_lambda_5000_1.000000_3.200000_600.png)
+![](./img/LCM_lambda_5000_1.000000_3.200000_600.png)
 
 
   z*(1.0-z)/p
   
 here m = 1/p
 
-![](./png/LCM_lambda_inverted_5000_0.000000_1.120000_600.png)
+![](./img/LCM_lambda_inverted_5000_0.000000_1.120000_600.png)
 
 
   (1 + 1/p)*z*(1.0-z)
