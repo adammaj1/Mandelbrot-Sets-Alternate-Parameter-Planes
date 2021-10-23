@@ -126,7 +126,7 @@ where
 * one can see 7 hyperbolic components  for periods 2^0, 2^1, 2^2, 2^3, 2^4, 2^5, 2^6
 * note that each componnet has tha same size 
    
-![](./png/LCM_c_log_5000_-8.400000_2.400000_600.png)
+![](./img/LCM_c_log_5000_-8.400000_2.400000_600.png)
 
 
 
