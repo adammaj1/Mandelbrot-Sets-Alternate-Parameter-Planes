@@ -162,7 +162,7 @@ here m = 1/p
 here m = 1 + 1/p
 
 
-![](./png/LCM_lambda_inverted_1_5000_0.000000_1.100000_600.png)  
+![](./img/LCM_lambda_inverted_1_5000_0.000000_1.100000_600.png)  
 
 
 Compare
