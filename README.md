@@ -214,7 +214,7 @@ complex double map_parameter(const ProjectionTypeT ProjectionType, const complex
 ```  
 
 
-**Families of the complex quadratic polynomial**
+**[Families ( forms)  of the complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial#Forms)**
 
 ```c
 complex double f(const FamilyTypeT FamilyType, const double complex z0 , const complex double p ) {
@@ -329,3 +329,4 @@ git push -u origin main
 
 ## Github
 * [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+* [md cheat sheet](http://mdcheatsheet.com/)
