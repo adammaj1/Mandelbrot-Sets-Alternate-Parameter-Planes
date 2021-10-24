@@ -165,7 +165,7 @@ here m = 1 + 1/p
 ![](./img/LCM_lambda_inverted_1_5000_0.000000_1.100000_600.png)  
 
 
-
+Animated gif ( click the image to see the animation)  
 
 ![](./img/inversion.gif)  
 
