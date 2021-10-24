@@ -1,7 +1,7 @@
 # Mandelbrot-Sets-Alternate-Parameter-Planes
 
 
-[Julia and Mandelbrot Sets. Alternate Parameter Planes by David E. Joyce © 1994.](https://mathcs.clarku.edu/~djoyce/julia/altplane.html)
+Original page : [Julia and Mandelbrot Sets. Alternate Parameter Planes by David E. Joyce © 1994.](https://mathcs.clarku.edu/~djoyce/julia/altplane.html)
 
 
 Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)
@@ -37,7 +37,7 @@ yMin  = -0.6754631805511510 	 yMax = 0.6754631805511510
     
 ###  z^2 + c
 
-First example is simple: c = p
+First example is the standard plane, simple: c = p
 
   
 ![](./img/LCM_c_5000_-0.750000_1.500000_600.png)
@@ -52,7 +52,7 @@ Here
 
 c = k + 1/p
 
-so this transformation consist of 2 
+so this transformation consist of 2 transformations: 
 * translation by k 
 * the inversion with respect to the unit circle centered at zero
 
@@ -165,6 +165,16 @@ here m = 1 + 1/p
 ![](./img/LCM_lambda_inverted_1_5000_0.000000_1.100000_600.png)  
 
 
+
+
+![](./img/inversion.gif)  
+
+The code for creating gif file is in [src/lcm/inversion_gif/ directory](src/lcm/inversion_gif/)
+
+
+
+
+
 Compare
 * [changing the inversion offset for the lambda plane mandelbrot by Max Million](https://www.youtube.com/watch?v=Xob9xZ2dBIs). Here m = k + 1/p where k is changing from 0 to 2 
 
@@ -244,8 +254,9 @@ complex double map_parameter(const ProjectionTypeT ProjectionType, const complex
   * [interpolating_moebius_transformations](https://mathr.co.uk/blog/2015-02-06_interpolating_moebius_transformations.html)
   * [Moebius by  Claude Heiland-Allen](https://archive.org/details/MandelbrotMoebiusExperiments/mandelbrot_moebius_experiment_1.mkv)
   * [moebius_transformations_and_the_riemann_sphere](https://mathr.co.uk/blog/2017-12-01_moebius_transformations_and_the_riemann_sphere.html)
-
-
+  * [Arbitrary Moebius Transformation of the Poincare Disk by Vladimir Bulatov](http://bulatov.org/math/1001/moebius-animation1.html)
+* [Artistic Models of the Hyperbolic Geometry by Vladimir Bulatov](http://bulatov.org/math/1003/index.html)
+* [Zⁿ+ A∙Sin(Cᵐ) by Jens-Peter Christensen](https://www.youtube.com/watch?v=po2t_yMWABs&list=RDGMEMJQXQAmqrnmK1SEjY_rKBGAVMpo2t_yMWABs&start_radio=1)
 
 # Git
 
@@ -319,3 +330,5 @@ git push -u origin main
 ## Github
 * [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
 * [md cheat sheet](http://mdcheatsheet.com/)
+* [CommonMark Spec](https://spec.commonmark.org)
+* [Markdown parser ](https://markdown-it.github.io/)
