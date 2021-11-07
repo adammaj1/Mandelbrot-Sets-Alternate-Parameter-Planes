@@ -4,7 +4,9 @@
 Original page : [Julia and Mandelbrot Sets. Alternate Parameter Planes by David E. Joyce © 1994.](https://mathcs.clarku.edu/~djoyce/julia/altplane.html)
 
 
-Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)
+Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial) under
+* [Geometric transformation](https://en.wikipedia.org/wiki/Geometric_transformation)
+* [complex mapping](https://www.falstad.com/complexviewer/): [A complex function f is the transformation function which maps the complex plane z to w](http://home.iitk.ac.in/~saiwal/engineering/complex-mappings/)
 
 
 
@@ -19,6 +21,8 @@ Here initial parameter p is transformed:
 
 
     c = t(p)
+    
+
     
   
     
