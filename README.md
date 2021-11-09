@@ -7,7 +7,7 @@ Original page : [Julia and Mandelbrot Sets. Alternate Parameter Planes by David 
 Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial) under
 * [Geometric transformation](https://en.wikipedia.org/wiki/Geometric_transformation)
 * [complex mapping](https://www.falstad.com/complexviewer/): [A complex function f is the transformation function which maps the complex plane z to w](http://home.iitk.ac.in/~saiwal/engineering/complex-mappings/)
-
+* [projection](https://en.wikipedia.org/wiki/Map_projection) like stereographic projection 
 
 
 
@@ -17,7 +17,7 @@ Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_
 
 ## z^2+c family
 
-Here initial parameter p is transformed:   
+The p-plane is drawn, but initial p parameter is transformed to c:    
 
 
     c = t(p)
