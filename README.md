@@ -7,7 +7,7 @@ Original page : [Julia and Mandelbrot Sets. Alternate Parameter Planes by David 
 Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial) under
 * [Geometric transformation](https://en.wikipedia.org/wiki/Geometric_transformation)
 * [complex mapping](https://www.falstad.com/complexviewer/): [A complex function f is the transformation function which maps the complex plane z to w](http://home.iitk.ac.in/~saiwal/engineering/complex-mappings/)
-* [projection](https://en.wikipedia.org/wiki/Map_projection) like stereographic projection 
+* [projection](https://en.wikipedia.org/wiki/Map_projection) like [stereographic projection](https://en.wikipedia.org/wiki/Stereographic_projection)
 
 
 
@@ -189,8 +189,8 @@ Compare
 
 
 ## Families ( forms)  of the complex quadratic polynomial 
-* [wikipedia](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial#Forms)
 
+One (complex) parameter [familes of quadratic polynomials](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial#Forms). Here parameter space is a 2D plane ( [complex plane](https://en.wikipedia.org/wiki/Complex_plane) )
 
 ```c
 complex double f(const FamilyTypeT FamilyType, const double complex z0 , const complex double p ) {
