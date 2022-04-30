@@ -10,6 +10,7 @@ Images of [complex quadratic polynomials](https://en.wikipedia.org/wiki/Complex_
 * [projection](https://en.wikipedia.org/wiki/Map_projection) like [stereographic projection](https://en.wikipedia.org/wiki/Stereographic_projection)
 
 
+[html verion of this page](https://adammaj1.github.io/Mandelbrot-Sets-Alternate-Parameter-Planes/)
 
 
 
