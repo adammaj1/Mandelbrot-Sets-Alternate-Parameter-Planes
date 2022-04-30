@@ -265,7 +265,7 @@ cusp on the main cardoid in the upper right; looking to the left in the figure c
 * [Artistic Models of the Hyperbolic Geometry by Vladimir Bulatov](http://bulatov.org/math/1003/index.html)
 * [Zⁿ+ A∙Sin(Cᵐ) by Jens-Peter Christensen](https://www.youtube.com/watch?v=po2t_yMWABs&list=RDGMEMJQXQAmqrnmK1SEjY_rKBGAVMpo2t_yMWABs&start_radio=1)
 
-
+Log of the Mandelbrot set. Image 8 from Frontiers in complex dynamics by Curtis T. McMullen  
 
 ![Log of the Mandelbrot set. Image 8 from Frontiers in complex dynamics by Curtis T. McMullen](./img/mlog.png)
 
