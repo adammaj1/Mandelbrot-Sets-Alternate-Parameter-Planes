@@ -247,6 +247,7 @@ complex double map_parameter(const ProjectionTypeT ProjectionType, const complex
 
 
 # To do
+* update DEM ( not works good for exponential map)
 * "the image of ∂M under the transformation log(z − c) for a certain c ∈ ∂M. Namely c = -0.39054087 -0.58678790i, the point on the boundary of the main cardioid corresponding to the golden mean Siegel disk. Note the
 cusp on the main cardoid in the upper right; looking to the left in the figure corresponds to zooming in towards the point c. (It is unknown at this time if ∂M has positive area; although the figure looks quite black in some regions, upon magnification these features resolve into fine filaments, apparently of area zero. " [Frontiers in complex dynamics by Curtis T. McMullen](https://people.math.harvard.edu/~ctm/papers/home/text/papers/front/front.pdf)
 * [Mercator Mandelbrot Maps by: Anders Sandberg](https://www.flickr.com/photos/arenamontanus/albums/72157615740829949) : a logarithmic projection around a point c0: z-> (log(|z-c0|), arg(z-c0)). The idea for this kind of logarithmic map of the set is from [David Madore](http://www.madore.org/~david/math/mandelbrot.html). While it is a bit of a stretch to call it a Mercator projection, it sounds better than just a log scale map. If the Mandelbrot set is assumed to be about meter-sized these zooms reach the size of an atomic nucleus.  
@@ -263,6 +264,11 @@ cusp on the main cardoid in the upper right; looking to the left in the figure c
   * [Arbitrary Moebius Transformation of the Poincare Disk by Vladimir Bulatov](http://bulatov.org/math/1001/moebius-animation1.html)
 * [Artistic Models of the Hyperbolic Geometry by Vladimir Bulatov](http://bulatov.org/math/1003/index.html)
 * [Zⁿ+ A∙Sin(Cᵐ) by Jens-Peter Christensen](https://www.youtube.com/watch?v=po2t_yMWABs&list=RDGMEMJQXQAmqrnmK1SEjY_rKBGAVMpo2t_yMWABs&start_radio=1)
+
+
+
+![Log of the Mandelbrot set. Image 8 from Frontiers in complex dynamics by Curtis T. McMullen](./img/mlog.png)
+
 
 # Git
 
