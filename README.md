@@ -247,6 +247,8 @@ complex double map_parameter(const ProjectionTypeT ProjectionType, const complex
 
 
 # To do
+* "the image of ∂M under the transformation log(z − c) for a certain c ∈ ∂M. Namely c = -0.39054087 -0.58678790i, the point on the boundary of the main cardioid corresponding to the golden mean Siegel disk. Note the
+cusp on the main cardoid in the upper right; looking to the left in the figure corresponds to zooming in towards the point c. (It is unknown at this time if ∂M has positive area; although the figure looks quite black in some regions, upon magnification these features resolve into fine filaments, apparently of area zero. " [Frontiers in complex dynamics by Curtis T. McMullen](https://people.math.harvard.edu/~ctm/papers/home/text/papers/front/front.pdf)
 * [Mercator Mandelbrot Maps by: Anders Sandberg](https://www.flickr.com/photos/arenamontanus/albums/72157615740829949) : a logarithmic projection around a point c0: z-> (log(|z-c0|), arg(z-c0)). The idea for this kind of logarithmic map of the set is from [David Madore](http://www.madore.org/~david/math/mandelbrot.html). While it is a bit of a stretch to call it a Mercator projection, it sounds better than just a log scale map. If the Mandelbrot set is assumed to be about meter-sized these zooms reach the size of an atomic nucleus.  
 * transverse Mercator
   * [The North Transept Transfigurational Dreamwarp by Robert Lee](https://www.flickr.com/photos/robertlee99/50289710431/) : 
@@ -279,7 +281,7 @@ git push -u origin main
 
 ## Local repo
 ```
-~/Dokumenty/mandelbrot_planes$ 
+~/Dokumenty/mandelbrot_planes 
 ```
 
 
