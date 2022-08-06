@@ -265,6 +265,10 @@ cusp on the main cardoid in the upper right; looking to the left in the figure c
   * [Arbitrary Moebius Transformation of the Poincare Disk by Vladimir Bulatov](http://bulatov.org/math/1001/moebius-animation1.html)
 * [Artistic Models of the Hyperbolic Geometry by Vladimir Bulatov](http://bulatov.org/math/1003/index.html)
 * [Zⁿ+ A∙Sin(Cᵐ) by Jens-Peter Christensen](https://www.youtube.com/watch?v=po2t_yMWABs&list=RDGMEMJQXQAmqrnmK1SEjY_rKBGAVMpo2t_yMWABs&start_radio=1)
+* [Ultra Fractal 6 - Mandelbrot Set collision  by Some dude](https://www.youtube.com/watch?v=QifOH6tf8v4): Formula: z = z^2 + c + a*(2^c - c^2) with z0=0 and a changing from 1.1 to 5.5 --- Morph details: Location: (3 + 0i) Magnification changes from 1.4 to 3.2 Iteration count: 250 Bailout value: 128 
+
+
+
 
 Log of the Mandelbrot set. Image 8 from Frontiers in complex dynamics by Curtis T. McMullen  
 
